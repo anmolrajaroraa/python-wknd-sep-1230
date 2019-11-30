@@ -1,5 +1,9 @@
 import random
 
+userWins = 0
+cpuWins = 0
+drawMatches = 0
+
 gameChoices = ['stone', 'paper', 'scissors']
 
 cpuChoice = random.choice(gameChoices)
@@ -27,16 +31,22 @@ while True:
     else:
         print("Invalid choice")
 
+if userChoice == cpuChoice:
+    print("Game draw")
 
 if userChoice == "stone":
-    if cpuChoice == "stone":
-        print("Game draw")
-    elif cpuChoice == "paper":
+    if cpuChoice == "paper":
         print("User lost")
     else:
         print("User won")
 
 elif userChoice == "paper":
-    pass
+    if cpuChoice == "stone":
+        print("User won")
+    else:
+        print("User lost")
 else:
-    pass
+    if cpuChoice == "stone":
+        print("User lost")
+    elif cpuChoice == "paper":
+        print("User won")
