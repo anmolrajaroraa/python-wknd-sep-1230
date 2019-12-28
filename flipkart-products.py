@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup as bs
-from urllib.request import urlopen
+from urllib.request import *
 
 response = urlopen("https://www.flipkart.com/search?q=electronics&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off") #http request
 # print(response)
